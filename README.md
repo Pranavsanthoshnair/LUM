@@ -34,3 +34,11 @@ git clone https://github.com/yourusername/pixel-play-studios.git
 cd pixel-play-studios
 npm install  # or yarn install
 npm run dev  # Start the development server
+```
+## 👨‍💻 Created By  
+
+**Thomas Cherian**  
+**Pranav S Nair**  
+**Joswin Shaju**  
+
+### made by the Syntax Squad
