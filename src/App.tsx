@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -12,22 +13,20 @@ import './animations.css'
 
 function App() {
   return (
-    <Router basename="/lumino25">
-        <Routes>
-          <Route path="/" element={<Layout><Home /></Layout>} />
-          <Route path="/about" element={<Layout><About /></Layout>} />
-          <Route path="/services" element={<Layout><Services /></Layout>} />
-          <Route path="/portfolio" element={<Layout><Portfolio /></Layout>} />
-          <Route path="/blog" element={<Layout><Blog /></Layout>} />
-          <Route path="/contact" element={<Layout><Contact /></Layout>} />
-          <Route path="/join-us" element={<Layout><JoinUs /></Layout>} />
-          <Route path="/esports" element={<Layout><Esports /></Layout>} />
-        </Routes>
-      </Router>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/about" element={<Layout><About /></Layout>} />
+        <Route path="/services" element={<Layout><Services /></Layout>} />
+        <Route path="/portfolio" element={<Layout><Portfolio /></Layout>} />
+        <Route path="/blog" element={<Layout><Blog /></Layout>} />
+        <Route path="/contact" element={<Layout><Contact /></Layout>} />
+        <Route path="/join-us" element={<Layout><JoinUs /></Layout>} />
+        <Route path="/esports" element={<Layout><Esports /></Layout>} />
+      </Routes>
+    </Router>
   )
 }
 
 export default App
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
