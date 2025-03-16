@@ -12,12 +12,18 @@ Welcome to **Pixel Play Studios**! 🚀 This is a web application hosted on **Ne
 - **React**  
 - **HTML & CSS**  
 - **Netlify**  
+- **Stripe API** *(Not Responding)*  
 
 ## 🚀 Features
 
 - 🌟 **User-friendly** – Simple and intuitive design for a great user experience  
 - 🎨 **Responsive** – Works smoothly on all devices  
 - ⚡ **Fast & Optimized** – High performance with quick loading times  
+
+## ⚠️ Problems  
+
+- ❌ **Backend Incomplete / Not Responding** – Some features may not work as expected due to backend issues.  
+- 🔴 **Stripe API Not Responding** – Payment-related functionality may not work properly.  
 
 ## 📦 Installation
 
@@ -28,4 +34,3 @@ git clone https://github.com/yourusername/pixel-play-studios.git
 cd pixel-play-studios
 npm install  # or yarn install
 npm run dev  # Start the development server
-
