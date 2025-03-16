@@ -1,5 +1,3 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -9,7 +7,7 @@ import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import JoinUs from './pages/JoinUs'
 import Esports from './pages/Esports'
-import './App.css'
+import './App.css';
 import './animations.css'
 
 function App() {
@@ -30,4 +28,6 @@ function App() {
 }
 
 export default App
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 

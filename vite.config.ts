@@ -3,8 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/lumino25-project/',
   server: {
-    port: 5173, // Ensure this matches the port you're accessing
-    open: true, // Automatically open the browser
+    port: 5173,
+    open: true,
   },
 });
