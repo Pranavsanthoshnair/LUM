@@ -1,0 +1,114 @@
+/* Responsive image styles */
+
+/* Control maximum image dimensions */
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px; /* Add maximum height constraint */
+    object-fit: contain; /* Ensure image maintains aspect ratio */
+  }
+  
+  /* Hero image containers */
+  .hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+  }
+  
+  .hero-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Card image containers */
+  .card-image-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 66.67%; /* 3:2 aspect ratio */
+    overflow: hidden;
+  }
+  
+  .card-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Responsive grid adjustments */
+  @media (max-width: 768px) {
+    .responsive-grid {
+      grid-template-columns: repeat(1, 1fr) !important;
+      gap: 1.5rem !important; /* Increase gap between stacked items */
+    }
+    
+    .responsive-flex {
+      flex-direction: column !important;
+    }
+    
+    .responsive-flex > div {
+      width: 100% !important;
+      margin-top: 1.5rem; /* Increase spacing between stacked flex items */
+    }
+  
+    /* Reduce image sizes on mobile */
+    img {
+      max-height: 300px;
+    }
+  
+    /* Ensure proper spacing between navigation items */
+    nav a {
+      margin: 0.5rem 0;
+      display: block;
+      width: 100%;
+    }
+    
+    /* Improve mobile menu appearance */
+    .md\:hidden {
+      position: relative;
+      z-index: 50;
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Ensure mobile menu displays properly */
+    nav .flex {
+      align-items: center;
+    }
+  }
+  
+  /* Additional image constraints for different contexts */
+  .card img, .blog-post img, .portfolio-item img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+  
+  /* Ensure content sections have proper spacing */
+  section, .content-section {
+    margin-bottom: 2rem;
+    clear: both; /* Prevent unwanted floating */
+  }
+  
+  /* Additional navigation styling */
+  @media (max-width: 768px) {
+    /* Improve mobile navigation appearance */
+    nav .space-y-1 > a {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    /* Add more space around the mobile menu button */
+    nav button {
+      margin: 0.5rem;
+    }
+  }
+  
