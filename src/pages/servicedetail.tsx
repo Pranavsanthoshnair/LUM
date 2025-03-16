@@ -1,9 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
+interface ServiceDetails {
+  pricing: string;
+  equipment: string;
+  team: string;
+  testimonials: string[];
+}
+
+interface Service {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  features: string[];
+  details: ServiceDetails;
+}
 
 const ServiceDetail = () => {
   const { id } = useParams();
-  const [service, setService] = useState(null);
+  const [service, setService] = useState<Service | null>(null);
 
   // Fetch service details from the backend
   useEffect(() => {
@@ -26,8 +42,9 @@ const ServiceDetail = () => {
               src={service.image} 
               alt={service.title} 
               className="rounded-lg shadow-xl w-full h-auto object-cover aspect-video"
-              onError={(e) => {
-                e.target.src = 'https://via.placeholder.com/800x450'; // Fallback image
+              onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                const target = e.target as HTMLImageElement;
+                target.src = 'https://via.placeholder.com/800x450';
               }}
             />
           </div>

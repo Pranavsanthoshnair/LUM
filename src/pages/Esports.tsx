@@ -179,8 +179,8 @@ const Esports = () => {
                 className="rounded-lg shadow-xl w-full h-auto object-cover"
                 src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                 alt="Esports production setup"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
+                onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+                  const target = e.currentTarget;
                   target.onerror = null;
                   target.src = 'https://via.placeholder.com/800x600?text=Esports+Production';
                 }}
